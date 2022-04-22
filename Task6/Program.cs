@@ -27,7 +27,7 @@ if (countTries > 0)
 else
     Console.WriteLine("Вы исчерпали допустимое количество попыток.");
 
-bool CheckPassword(string psw, string userPsw)
+bool CheckPassword(string setPassword, string userPassword)
 {
-    return userPsw == psw;
+    return userPassword == setPassword;
 }

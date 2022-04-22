@@ -21,7 +21,7 @@ int GetInteger(string message)
     return Convert.ToInt32(Console.ReadLine());
 }
 
-bool IsSquare(int num1, int num2)
+bool IsSquare(int number1, int number2)
 {
-    return num1 == num2 * num2;
+    return number1 == number2 * number2;
 }

@@ -20,38 +20,38 @@ double GetCoordinate(string pointName, string coordinateName)
 }
 
 // Функция возвращает абсолютное значение вещественного числа x
-double abs(double x)
+double abs(double value)
 {
-    if (x < 0)
-        return -x;
-    return x;
+    if (value < 0)
+        return -value;
+    return value;
 }
 
 // Функция возводит вещественное число x в степень p. Степени только целые положительные
-double pow(double x, int p)
+double pow(double value, int powValue)
 {
-    double result = x;
-    p--;
-    while (p > 0)
+    double result = value;
+    powValue--;
+    while (powValue > 0)
     {
-        result *= x;
-        p--;
+        result *= value;
+        powValue--;
     }
 
     return result;
 }
 
 // Функция возвращает квадратный корень вещественного числа x
-double sqrt(double x)
+double sqrt(double value)
 {
-    double result = x / 2; // Приблизительное начальное значение результата
+    double result = value / 2; // Приблизительное начальное значение результата
 
     double accuracy = 0.000000000000001; //точность
 
     double error = double.MaxValue;
     while (error > accuracy) // Пока не достигнута нужная точность
     {
-        double resultNew = (result + x / result) / 2; // Уточняем результат (формула Ньютона)
+        double resultNew = (result + value / result) / 2; // Уточняем результат (формула Ньютона)
         error = abs(result - resultNew); // Вычисляем ошибку (на сколько изменился новый результат по сравнению с предыдущим)
         result = resultNew;
     }

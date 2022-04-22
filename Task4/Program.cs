@@ -19,7 +19,7 @@ int GetInteger()
     return Convert.ToInt32(Console.ReadLine());
 }
 
-bool IsМultiples(int num1, int num2)
+bool IsМultiples(int number1, int number2)
 {
-    return num1 % num2 == 0;
+    return number1 % number2 == 0;
 }

@@ -26,8 +26,8 @@ int GetInteger()
     return Convert.ToInt32(Console.ReadLine());
 }
 
-bool IsPalindrome(int n)
+bool IsPalindrome(int number)
 {
-    string str = Convert.ToString(n);
+    string str = Convert.ToString(number);
     return str[0] == str[4] && str[1] == str[3];
 }

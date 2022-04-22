@@ -12,15 +12,15 @@ int GetInteger()
     return Convert.ToInt32(Console.ReadLine());
 }
 
-int[] GenerateArrayCubs(int n)
+int[] GenerateArrayCubs(int length)
 {
-    int[] array = new int[n];
+    int[] array = new int[length];
 
-    int i = 1;
-    while (i <= n)
+    int index = 1;
+    while (index <= length)
     {
-        array[i - 1] = i * i * i;
-        i++;
+        array[index - 1] = index * index * index;
+        index++;
     }
 
     return array;
@@ -28,13 +28,13 @@ int[] GenerateArrayCubs(int n)
 
 void PrintIntArray(int[] array)
 {
-    int i = 0;
-    while (i < array.Length)
+    int index = 0;
+    while (index < array.Length)
     {
-        Console.Write(array[i]);
-        if (i != array.Length - 1)
+        Console.Write(array[index]);
+        if (index != array.Length - 1)
             Console.Write(", ");
-        i++;
+        index++;
     }
     Console.WriteLine();
 }
